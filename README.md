@@ -59,7 +59,7 @@ class LabelSmoothingCrossEntropy(nn.Module):
 
 
 def train(optimizer, train_dataloader, local_rank, epochs, num_domains):
-    model = MAET(embed_dim=32, num_classes=7, eeg_seq_len=5, eye_seq_len=5, eeg_dim=310, eye_dim=33, depth=3, num_heads=4, qkv_bias=True, mixffn_start_layer_index=2, norm_layer=partial(nn.LayerNorm, eps=1e-6), domain_generalization=True)
+    model = MAET(embed_dim=32, num_classes=7, eeg_seq_len=5, eye_seq_len=5, eeg_dim=310, eye_dim=33, depth=3, num_heads=4, qkv_bias=True, mixffn_start_layer_index=2, norm_layer=partial(nn.LayerNorm, eps=1e-6), domain_generalization=True, num_domains=num_domains)
     criterion = LabelSmoothingCrossEntropy()
     for epoch in range(epochs):
         model.train()
