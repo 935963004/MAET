@@ -58,13 +58,13 @@ class LabelSmoothingCrossEntropy(nn.Module):
         return linear_combination(loss / n, nll, self.epsilon)
 
 
-def train(optimizer, train_dataloader, local_rank, epochs):
+def train(optimizer, train_dataloader, local_rank, epochs, num_domains):
     model = MAET(embed_dim=32, num_classes=7, eeg_seq_len=5, eye_seq_len=5, eeg_dim=310, eye_dim=33, depth=3, num_heads=4, qkv_bias=True, mixffn_start_layer_index=2, norm_layer=partial(nn.LayerNorm, eps=1e-6), domain_generalization=True)
     criterion = LabelSmoothingCrossEntropy()
     for epoch in range(epochs):
         model.train()
-        alpha = 2 / (1 + math.exp(-10 * epoch / args.epochs)) - 1
-        label_smoothing = 18 / 19 * epoch / args.epochs
+        alpha = 2 / (1 + math.exp(-10 * epoch / epochs)) - 1
+        label_smoothing = (num_domains - 1) / num_domains * epoch / epochs
         criterion.epsilon = label_smoothing
         loss_all = 0
         preds = []
