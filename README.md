@@ -92,5 +92,21 @@ def train(optimizer, train_dataloader, local_rank, epochs):
 ## Citation
 If you find our paper/code/dataset useful, please consider citing our work:
 ```
-
+@inproceedings{10.1145/3581783.3613797,
+author = {Jiang, Wei-Bang and Liu, Xuan-Hao and Zheng, Wei-Long and Lu, Bao-Liang},
+title = {Multimodal Adaptive Emotion Transformer with Flexible Modality Inputs on A Novel Dataset with Continuous Labels},
+year = {2023},
+isbn = {9798400701085},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3581783.3613797},
+doi = {10.1145/3581783.3613797},
+abstract = {Emotion recognition from physiological signals is a topic of widespread interest, and researchers continue to develop novel techniques for perceiving emotions. However, the emergence of deep learning has highlighted the need for high-quality emotional datasets to accurately decode human emotions. In this study, we present a novel multimodal emotion dataset that incorporates electroencephalography (EEG) and eye movement signals to systematically explore human emotions. Seven basic emotions (happy, sad, fear, disgust, surprise, anger, and neutral) are elicited by a large number of 80 videos and fully investigated with continuous labels that indicate the intensity of the corresponding emotions. Additionally, we propose a novel Multimodal Adaptive Emotion Transformer (MAET), that can flexibly process both unimodal and multimodal inputs. Adversarial training is utilized in MAET to mitigate subject discrepancy, which enhances domain generalization. Our extensive experiments, encompassing both subject-dependent and cross-subject conditions, demonstrate MAET's superior performance in handling various inputs. The filtering of data for high emotional evocation using continuous labels proved to be effective in the experiments. Furthermore, the complementary properties between EEG and eye movements are observed. Our code is available at https://github.com/935963004/MAET.},
+booktitle = {Proceedings of the 31st ACM International Conference on Multimedia},
+pages = {5975–5984},
+numpages = {10},
+keywords = {eye movements, emotion recognition, eeg, dataset, continuous label},
+location = {<conf-loc>, <city>Ottawa ON</city>, <country>Canada</country>, </conf-loc>},
+series = {MM '23}
+}
 ```
