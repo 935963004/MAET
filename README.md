@@ -106,7 +106,7 @@ booktitle = {Proceedings of the 31st ACM International Conference on Multimedia}
 pages = {5975–5984},
 numpages = {10},
 keywords = {eye movements, emotion recognition, eeg, dataset, continuous label},
-location = {<conf-loc>, <city>Ottawa ON</city>, <country>Canada</country>, </conf-loc>},
+location = {Ottawa ON, Canada},
 series = {MM '23}
 }
 ```
