@@ -1,11 +1,13 @@
 # MAET
 This is the official repository of our paper for ACM MM 23: [Multimodal Adaptive Emotion Transformer with Flexible Modality Inputs on A Novel Dataset with Continuous Labels](https://dl.acm.org/doi/10.1145/3581783.3613797).
 
+NEWS: The journal version of this conference paper has been accepted by IEEE Transactions on Affective Computing. Please refer to [SEED-VII: A Multimodal Dataset of Six Basic Emotions with Continuous Labels for Emotion Recognition](https://xploreqa.ieee.org/document/10731546). The dataset is now available.
+
 ## Abstract
 Emotion recognition from physiological signals is a topic of widespread interest, and researchers continue to develop novel techniques for perceiving emotions. However, the emergence of deep learning has highlighted the need for high-quality emotional datasets to accurately decode human emotions. In this study, we present a novel multimodal emotion dataset that incorporates electroencephalography (EEG) and eye movement signals to systematically explore human emotions. Seven basic emotions (happy, sad, fear, disgust, surprise, anger, and neutral) are elicited by a large number of 80 videos and fully investigated with continuous labels that indicate the intensity of the corresponding emotions. Additionally, we propose a novel Multimodal Adaptive Emotion Transformer (MAET), that can flexibly process both unimodal and multimodal inputs. Adversarial training is utilized in MAET to mitigate subject discrepancy, which enhances domain generalization. Our extensive experiments, encompassing both subject-dependent and cross-subject conditions, demonstrate MAET's superior performance in handling various inputs. The filtering of data for high emotional evocation using continuous labels proved to be effective in the experiments. Furthermore, the complementary properties between EEG and eye movements are observed.
 
 ## Dataset
-The dataset will be publicly available on [here](https://bcmi.sjtu.edu.cn/~seed/index.html) soon.
+The SEED-VII dataset is publicly available on [here](https://bcmi.sjtu.edu.cn/home/seed/seed-vii.html).
 
 ## Requirements
 * python==3.10.9
@@ -109,4 +111,18 @@ keywords = {eye movements, emotion recognition, eeg, dataset, continuous label},
 location = {Ottawa ON, Canada},
 series = {MM '23}
 }
+```
+or
+```
+@ARTICLE{10731546,
+  author={Jiang, Wei-Bang and Liu, Xuan-Hao and Zheng, Wei-Long and Lu, Bao-Liang},
+  journal={IEEE Transactions on Affective Computing}, 
+  title={SEED-VII: A Multimodal Dataset of Six Basic Emotions with Continuous Labels for Emotion Recognition}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-16},
+  keywords={Electroencephalography;Emotion recognition;Brain modeling;Physiology;Videos;Electrocardiography;Transformers;Recording;Computational modeling;Affective computing;Basic emotions;EEG;eye movements;emotion recognition;continuous label;multimodal dataset},
+  doi={10.1109/TAFFC.2024.3485057}}
+
 ```
