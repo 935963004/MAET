@@ -9,6 +9,10 @@ Emotion recognition from physiological signals is a topic of widespread interest
 ## Dataset
 The SEED-VII dataset is publicly available on [here](https://bcmi.sjtu.edu.cn/home/seed/seed-vii.html).
 
+## Extract Features
+- EEG_feature_extractor/extract_EEG_features.py: Extract EEG features
+- Eye_feature_extractor/extract_eye_features.py: Extract eye movement features
+
 ## Requirements
 * python==3.10.9
 * pytorch==2.0.0
