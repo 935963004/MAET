@@ -138,7 +138,7 @@ if __name__ == '__main__':
             if raw_file == "14_20221015_1.cnt":
                 t = []
                 start = datetime.datetime.strptime('14:25:34', '%H:%M:%S')
-                with open('./SEED-VIIsave_info/14_20221015_1_trigger_info.csv') as f:
+                with open('./SEED-VII/save_info/14_20221015_1_trigger_info.csv') as f:
                     trigger = csv.reader(f)
                     for row in trigger:
                         end = datetime.datetime.strptime(row[1].split(' ')[-1], '%H:%M:%S.%f')
@@ -147,7 +147,7 @@ if __name__ == '__main__':
             elif raw_file == "9_20221111_3.cnt":
                 t = []
                 start = datetime.datetime.strptime('14:01:27', '%H:%M:%S')
-                with open('./SEED-VIIsave_info/9_20221111_3_trigger_info.csv') as f:
+                with open('./SEED-VII/save_info/9_20221111_3_trigger_info.csv') as f:
                     trigger = csv.reader(f)
                     for row in trigger:
                         end = datetime.datetime.strptime(row[1].split(' ')[-1], '%H:%M:%S.%f')
