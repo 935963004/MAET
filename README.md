@@ -121,12 +121,11 @@ or
 @ARTICLE{10731546,
   author={Jiang, Wei-Bang and Liu, Xuan-Hao and Zheng, Wei-Long and Lu, Bao-Liang},
   journal={IEEE Transactions on Affective Computing}, 
-  title={SEED-VII: A Multimodal Dataset of Six Basic Emotions with Continuous Labels for Emotion Recognition}, 
-  year={2024},
-  volume={},
-  number={},
-  pages={1-16},
-  keywords={Electroencephalography;Emotion recognition;Brain modeling;Physiology;Videos;Electrocardiography;Transformers;Recording;Computational modeling;Affective computing;Basic emotions;EEG;eye movements;emotion recognition;continuous label;multimodal dataset},
+  title={SEED-VII: A Multimodal Dataset of Six Basic Emotions With Continuous Labels for Emotion Recognition}, 
+  year={2025},
+  volume={16},
+  number={2},
+  pages={969-985},
+  keywords={Electroencephalography;Emotion recognition;Brain modeling;Physiology;Videos;Electrocardiography;Transformers;Recording;Computational modeling;Affective computing;Basic emotions;continuous label;EEG;emotion recognition;eye movements;multimodal dataset},
   doi={10.1109/TAFFC.2024.3485057}}
-
 ```
