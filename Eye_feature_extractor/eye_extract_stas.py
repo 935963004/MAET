@@ -74,6 +74,28 @@ def window_get_fix(data, sample_freq):
     fix_disp_y_mean = np.mean(np.array(fix_disp_y))
     fix_disp_y_std = np.std(np.array(fix_disp_y))
 
+    # Fixation Drift (fix_drift) 微眼动
+    fix_centroid = []
+    fix_point = []
+    for i in range(len(fix_end)):
+        point_arr = []
+        x_arr = []
+        y_arr = []
+        for j in range(fix_start[i], fix_end[i] + 1):
+            x_arr.append(data['Gaze point X'][j])
+            y_arr.append(data['Gaze point Y'][j])
+            point_arr.append((data['Gaze point X'][j], data['Gaze point Y'][j]))
+        x = np.mean(np.array(x_arr))
+        y = np.mean(np.array(y_arr))
+        fix_centroid.append((x,y))
+        fix_point.append(point_arr)
+
+    fix_drift_displacement = []
+    for i in range(len(fix_point)):
+        x_displacement = abs(fix_point[i][-1][0] - fix_point[i][0][0])
+        y_displacement = abs(fix_point[i][-1][1] - fix_point[i][0][1])
+        fix_drift_displacement.append((x_displacement, y_displacement))
+
     fix = {'fix_start': fix_start,
         'fix_end': fix_end,
         'fix_dur': fix_dur,
@@ -88,6 +110,7 @@ def window_get_fix(data, sample_freq):
         'fix_disp_x_std': fix_disp_x_std,
         'fix_disp_y_mean': fix_disp_y_mean,
         'fix_disp_y_std': fix_disp_y_std,
+        'fix_drift_displacement': fix_drift_displacement,
         }
     
     return fix
